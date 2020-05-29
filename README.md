@@ -1,12 +1,12 @@
-# vintage-test
+# Vintage Web Production
 
-> Test task for Vintage Studio
+> Test task for Vintage Production
 
-## Build Setup
+## How to use
 
 ```bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # serve with hot reload at localhost:3000
 $ yarn dev
@@ -18,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

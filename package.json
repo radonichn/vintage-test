@@ -1,7 +1,7 @@
 {
   "name": "vintage-test",
   "version": "1.0.0",
-  "description": "Test task for Vintage Studio",
+  "description": "Test task for Vintage Web Production",
   "author": "Nikolay Radonich",
   "private": true,
   "scripts": {
