@@ -116,11 +116,11 @@ export default {
       &:focus {
         + .input-label {
           color: darken($red, 20);
-        }
 
-        + .form-line {
-          background-color: darken($red, 20);
-          width: 100%;
+          + .form-line {
+            background-color: darken($red, 20);
+            width: 100%;
+          }
         }
       }
     }

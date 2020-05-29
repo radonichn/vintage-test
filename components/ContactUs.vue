@@ -118,7 +118,7 @@ export default {
         this.sendingData = true;
 
         this.$axios
-          .post('http://httpbin.org/post', data)
+          .post('https://httpbin.org/post', data)
           .then(res => {
             console.log(
               'Your result is here',
