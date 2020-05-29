@@ -8,6 +8,13 @@
 export default {
   props: {
     title: { required: true, type: String },
+    coords: {
+      required: false,
+      type: Object,
+      default() {
+        return { lat: 0, lng: 0 };
+      },
+    },
   },
   data: () => {
     return {

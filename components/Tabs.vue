@@ -6,7 +6,7 @@
           v-for="(tab, index) in tabs"
           :key="index"
           :class="['tabs-tab', { 'tabs-tab__active': tab.isActive }]"
-          @click="selectTab(index)"
+          @click="selectTab(tab, index)"
         >
           {{ tab.title }}
         </li>
@@ -35,19 +35,21 @@ export default {
   mounted() {
     this.tabs = this.$children;
 
-    this.selectTab(this.defaultSelected);
+    this.selectTab(this.tabs[this.defaultSelected], this.defaultSelected);
   },
   methods: {
-    selectTab(tabIndex) {
-      this.switchedTab = false;
+    selectTab(tabItem, tabIndex) {
+      console.log(tabItem);
 
-      setTimeout(() => {
-        this.tabs.forEach((tab, index) => {
-          tab.isActive = index === tabIndex;
-        });
+      this.$store.dispatch('map/setCoords', tabItem.coords).then(() => {
+        setTimeout(() => {
+          this.tabs.forEach((tab, index) => {
+            tab.isActive = index === tabIndex;
+          });
 
-        this.switchedTab = true;
-      }, 350);
+          this.switchedTab = true;
+        }, 350);
+      });
     },
   },
 };
