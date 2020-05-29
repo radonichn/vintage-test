@@ -44,7 +44,7 @@ export default {
           title: 'Kyiv',
           coords: { lat: 50.4107125, lng: 30.5343028 },
           content: {
-            heading: 'Global Message Services Ukraine LLC',
+            heading: 'Vintage Web Production',
             address: 'Kyiv, Mendeleeva Street, 38',
             zip: '02000',
             country: 'Ukraine',

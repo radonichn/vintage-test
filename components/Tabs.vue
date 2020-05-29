@@ -39,8 +39,6 @@ export default {
   },
   methods: {
     selectTab(tabItem, tabIndex) {
-      console.log(tabItem);
-
       this.$store.dispatch('map/setCoords', tabItem.coords).then(() => {
         setTimeout(() => {
           this.tabs.forEach((tab, index) => {
