@@ -1,15 +1,18 @@
 <template>
-  <div class="wrapper">
+  <div>
     <contacts />
+    <offices />
   </div>
 </template>
 
 <script>
 import Contacts from '../components/contacts';
+import Offices from '../components/offices';
 
 export default {
   components: {
     Contacts,
+    Offices,
   },
 };
 </script>
