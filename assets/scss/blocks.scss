@@ -1,0 +1,28 @@
+body {
+  font-family: 'Suisse Light';
+}
+
+.wrapper {
+  padding: 30px;
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.green {
+  color: $green;
+}
+
+.green-link {
+  color: $green;
+  transition: 0.3s ease color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($green, 12);
+  }
+}
