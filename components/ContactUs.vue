@@ -1,73 +1,75 @@
 <template>
   <section class="contact-us">
-    <h2>Contact us</h2>
+    <div class="wrapper">
+      <h2>Contact us</h2>
 
-    <div
-      :class="[
-        'result-message',
-        `__${resultMessage.type}`,
-        { 'result-message__active': resultMessage.show },
-      ]"
-    >
-      <p class="result-title">
-        {{ resultMessage.title }}
-      </p>
-      <p class="result-description">
-        {{ resultMessage.description }}
-      </p>
-    </div>
-
-    <div class="container">
-      <div class="contact-us-form">
-        <form method="POST" @submit.prevent="handleSubmit">
-          <loader :loading="sendingData">
-            <form-group
-              label="Name"
-              type="text"
-              validation-type="name"
-              :error="error.name"
-              @input="inputFields"
-            />
-            <form-group
-              label="Phone"
-              type="text"
-              validation-type="phone"
-              :error="error.phone"
-              @input="inputFields"
-            />
-            <form-group
-              label="Email"
-              type="email"
-              validation-type="email"
-              :error="error.email"
-              @input="inputFields"
-            />
-            <form-group
-              label="I agree the processing of personal data"
-              type="checkbox"
-              validation-type="terms"
-              :error="error.terms"
-              @input="inputFields"
-            />
-
-            <button
-              type="submit"
-              :class="[
-                'contact-us-submit',
-                { 'contact-us-submit__disabled': sendingData },
-              ]"
-              :disabled="sendingData"
-            >
-              get in touch
-            </button>
-          </loader>
-        </form>
-      </div>
-      <div class="contact-us-text">
-        <p>
-          Please tell us more about your request and give us info about your
-          company and country
+      <div
+        :class="[
+          'result-message',
+          `__${resultMessage.type}`,
+          { 'result-message__active': resultMessage.show },
+        ]"
+      >
+        <p class="result-title">
+          {{ resultMessage.title }}
         </p>
+        <p class="result-description">
+          {{ resultMessage.description }}
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="contact-us-form">
+          <form method="POST" @submit.prevent="handleSubmit">
+            <loader :loading="sendingData">
+              <form-group
+                label="Name"
+                type="text"
+                validation-type="name"
+                :error="error.name"
+                @input="inputFields"
+              />
+              <form-group
+                label="Phone"
+                type="text"
+                validation-type="phone"
+                :error="error.phone"
+                @input="inputFields"
+              />
+              <form-group
+                label="Email"
+                type="email"
+                validation-type="email"
+                :error="error.email"
+                @input="inputFields"
+              />
+              <form-group
+                label="I agree the processing of personal data"
+                type="checkbox"
+                validation-type="terms"
+                :error="error.terms"
+                @input="inputFields"
+              />
+
+              <button
+                type="submit"
+                :class="[
+                  'contact-us-submit',
+                  { 'contact-us-submit__disabled': sendingData },
+                ]"
+                :disabled="sendingData"
+              >
+                get in touch
+              </button>
+            </loader>
+          </form>
+        </div>
+        <div class="contact-us-text">
+          <p>
+            Please tell us more about your request and give us info about your
+            company and country
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -204,6 +206,10 @@ export default {
   background-position: -10px -10px;
   background-size: 70px 60px;
 
+  @media all and (max-width: $bp-md) {
+    padding: 0;
+  }
+
   h2 {
     text-transform: capitalize;
     margin-bottom: $spacer;
@@ -214,11 +220,20 @@ export default {
   &-form,
   &-text {
     width: 50%;
+
+    @media all and (max-width: $bp-md) {
+      width: 100%;
+    }
   }
 
   &-form {
+    @media all and (max-width: $bp-md) {
+      margin-bottom: $spacer;
+    }
+
     form {
       max-width: $form-width;
+      width: 100%;
     }
   }
 

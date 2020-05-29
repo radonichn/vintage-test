@@ -98,9 +98,16 @@
   &-info,
   &-support {
     width: 50%;
+
+    @media all and (max-width: $bp-md) {
+      width: 100%;
+    }
   }
 
   &-info {
+    padding-right: $spacer / 3;
+    margin-bottom: $spacer;
+
     h2 {
       width: 100%;
       text-align: left;
@@ -110,9 +117,19 @@
   &-address,
   &-social {
     width: 50%;
+
+    @media all and (max-width: $bp-md) {
+      width: 100%;
+    }
   }
 
   &-address {
+    padding-right: $spacer / 3;
+
+    @media all and (max-width: $bp-md) {
+      margin-bottom: $spacer;
+    }
+
     p {
       &:not(:last-child) {
         padding-bottom: 14px;
@@ -120,9 +137,9 @@
     }
 
     a {
-      font-size: 2em;
+      font-size: 1.7em;
       display: block;
-      padding-top: $spacer;
+      padding-top: $spacer - 10px;
     }
   }
 
@@ -149,9 +166,9 @@
     }
 
     a {
-      font-size: 2em;
+      font-size: 1.7em;
       display: block;
-      padding-top: $spacer;
+      padding-top: $spacer - 10px;
     }
   }
 }

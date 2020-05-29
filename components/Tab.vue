@@ -31,6 +31,7 @@ export default {
   &-content {
     h2 {
       margin-bottom: $spacer + 10px;
+      font-size: 1.7em;
     }
 
     p {

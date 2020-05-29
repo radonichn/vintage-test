@@ -60,6 +60,10 @@ export default {
   ul {
     display: flex;
     margin: $spacer + 10px 0;
+
+    @media all and (max-width: $bp-xs) {
+      flex-wrap: wrap;
+    }
   }
 
   &-details {
@@ -77,6 +81,10 @@ export default {
     font-family: 'Suisse';
     transition: 0.3s ease color;
     cursor: pointer;
+
+    @media all and (max-width: $bp-xs) {
+      padding: 3px 0;
+    }
 
     &__active {
       color: $green;

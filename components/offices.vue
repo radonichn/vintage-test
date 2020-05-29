@@ -99,18 +99,16 @@ export default {
   color: $white;
   padding: 0;
 
-  h2 {
-    font-size: 2em;
-  }
-
-  &-content,
-  &-map {
-    overflow: hidden;
-    width: 50%;
-  }
-
   &-content {
     padding: $spacer * 3 $spacer 0;
+
+    > h2 {
+      font-size: 2em;
+    }
+
+    @media all and (max-width: $bp-md) {
+      padding: $spacer;
+    }
 
     h2 {
       text-transform: capitalize;
@@ -119,6 +117,18 @@ export default {
 
   &-map {
     min-height: 550px;
+  }
+
+  &-content,
+  &-map {
+    overflow: hidden;
+    width: 50%;
+
+    @media all and (max-width: $bp-md) {
+      width: 100%;
+      min-height: 400px;
+      height: 400px;
+    }
   }
 }
 </style>
