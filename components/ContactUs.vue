@@ -129,7 +129,7 @@ export default {
               show: true,
               type: 'success',
               title: 'Success!',
-              description: 'Message has been set successfully!',
+              description: 'Message has been sent successfully!',
             };
           })
           .catch(() => {
