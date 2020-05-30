@@ -39,7 +39,11 @@
           </div>
           <div class="contacts-social-item">
             <p>Send form</p>
-            <a href="#contact-us" class="green-link">
+            <a
+              href="#contact-us-form"
+              class="green-link"
+              @click.prevent="handleScroll"
+            >
               contact us
             </a>
           </div>
@@ -68,7 +72,27 @@
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    handleScroll(e) {
+      const selector = e.target.getAttribute('href');
+
+      if (selector) {
+        const elem = document.querySelector(selector);
+
+        if (elem) {
+          window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: document.querySelector(selector).offsetTop,
+          });
+        }
+      }
+    },
+  },
+};
+</script>
 
 <style scoped lang="scss">
 @import '~/assets/scss/variables.scss';

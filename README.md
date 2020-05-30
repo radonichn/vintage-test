@@ -19,4 +19,11 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# generate static project for GH Pages
+$ yarn generate:gh-pages
 ```
+
+Note, that the Google Maps API key has to be set. You can find here:
+
+> /plugins/google-maps.js

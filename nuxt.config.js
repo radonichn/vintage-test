@@ -1,3 +1,12 @@
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/vintage-gh-pages/',
+        },
+      }
+    : {};
+
 export default {
   mode: 'universal',
   /*
@@ -56,6 +65,11 @@ export default {
   /*
    ** Build configuration
    */
+
+  // check if generating for GH Pages
+
+  ...routerBase,
+
   build: {
     /*
      ** You can extend webpack config here
